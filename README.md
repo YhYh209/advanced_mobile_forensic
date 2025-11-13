@@ -1,20 +1,21 @@
-# README.md
-# 🚀 Advanced Mobile Forensic System
+# Update README with proper project description
+cat > README.md << 'EOF'
+# 🛡️ DZ ForensiGuard - Advanced Mobile Forensic Analysis Tool
 
 ## Overview
-Complete mobile forensic solution for Android and iOS devices with AI-powered analysis, real-time monitoring, and professional reporting.
+DZ ForensiGuard is an advanced mobile forensic analysis platform with AI-powered threat detection, blockchain-integrated evidence storage, and comprehensive device analysis capabilities.
 
 ## Features
-- 📱 **Dual Platform Support**: Android (ADB) & iOS (libimobiledevice)
-- 🤖 **AI-Powered Analysis**: Machine learning forensic analysis
-- 📡 **Real-time Monitoring**: Live device and system monitoring
-- 📄 **Professional Reporting**: Comprehensive forensic reports
-- 🔧 **Advanced Extraction**: Complete data extraction capabilities
-- 🔒 **Security Focused**: Secure and ethical forensic practices
+- 📱 Advanced mobile device extraction
+- 🔍 AI-powered analysis and threat detection  
+- 🗃️ Blockchain-integrated evidence database
+- 📊 Real-time dashboard and reporting
+- 🛡️ Advanced security and audit logging
+- ⚡ Case management system
+- 🔒 Integrity verification
 
 ## Installation
-
-### Quick Install
 ```bash
-chmod +x install.sh
-./install.sh# advanced_mobile_forensic
+git clone https://github.com/YhYh209/advanced_mobile_forensic.git
+cd advanced_mobile_forensic
+pip install -r requirements.txt

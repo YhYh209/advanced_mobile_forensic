@@ -1,0 +1,16 @@
+# requirements.txt
+flask   
+flask-socketio
+python-socketio
+eventlet
+requests
+numpy
+pandas
+scikit-learn
+matplotlib
+seaborn
+plotly
+cryptography
+pillow
+openpyxl
+python-dateutil

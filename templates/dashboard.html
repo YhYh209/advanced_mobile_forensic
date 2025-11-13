@@ -1,0 +1,171 @@
+<!-- templates/dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Mobile Forensic System</title>
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+    <script src="https://cdn.socket.io/4.5.0/socket.io.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <h1>🔍 Advanced Mobile Forensic System</h1>
+            </div>
+            <div class="status-bar">
+                <div class="status-item" id="adb-status">
+                    <span class="status-dot"></span>
+                    ADB: Checking...
+                </div>
+                <div class="status-item" id="ios-status">
+                    <span class="status-dot"></span>
+                    iOS: Checking...
+                </div>
+                <div class="status-item" id="system-time">
+                    <span class="status-dot online"></span>
+                    System: Online
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="sidebar">
+            <div class="nav-section">
+                <h3>Core Operations</h3>
+                <a href="/dashboard" class="nav-link active">📊 Dashboard</a>
+                <a href="/devices" class="nav-link">📱 Device Management</a>
+                <a href="/extraction" class="nav-link">🔧 Data Extraction</a>
+                <a href="/analysis" class="nav-link">🤖 AI Analysis</a>
+            </div>
+            <div class="nav-section">
+                <h3>Advanced Tools</h3>
+                <a href="/reports" class="nav-link">📄 Reports</a>
+                <a href="/monitoring" class="nav-link">📡 Live Monitoring</a>
+                <a href="/hacking" class="nav-link">⚡ Hacking Tools</a>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="welcome-section">
+                <h2>Welcome to Advanced Mobile Forensic System</h2>
+                <p>Professional digital forensics for Android & iOS devices</p>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">📱</div>
+                    <div class="stat-info">
+                        <h3>Connected Devices</h3>
+                        <div class="stat-value" id="devices-count">0</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🔍</div>
+                    <div class="stat-info">
+                        <h3>Extractions</h3>
+                        <div class="stat-value" id="extractions-count">0</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🤖</div>
+                    <div class="stat-info">
+                        <h3>AI Analysis</h3>
+                        <div class="stat-value" id="analysis-count">0</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⚠️</div>
+                    <div class="stat-info">
+                        <h3>Security Alerts</h3>
+                        <div class="stat-value" id="alerts-count">0</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="actions-grid">
+                <div class="action-card" onclick="scanDevices()">
+                    <div class="action-icon">🔍</div>
+                    <h3>Scan Devices</h3>
+                    <p>Scan for connected Android and iOS devices</p>
+                </div>
+                <div class="action-card" onclick="startMonitoring()">
+                    <div class="action-icon">📡</div>
+                    <h3>Live Monitoring</h3>
+                    <p>Real-time device and system monitoring</p>
+                </div>
+                <div class="action-card" onclick="quickExtraction()">
+                    <div class="action-icon">⚡</div>
+                    <h3>Quick Extraction</h3>
+                    <p>Rapid data extraction from connected devices</p>
+                </div>
+                <div class="action-card" onclick="generateReport()">
+                    <div class="action-icon">📄</div>
+                    <h3>Generate Report</h3>
+                    <p>Create comprehensive forensic report</p>
+                </div>
+            </div>
+
+            <!-- System Status -->
+            <div class="status-section">
+                <h3>System Status</h3>
+                <div class="status-cards">
+                    <div class="status-card" id="system-status-card">
+                        <h4>System Health</h4>
+                        <div class="status-content">
+                            <div class="status-line">
+                                <span>ADB Status:</span>
+                                <span id="adb-status-text">Checking...</span>
+                            </div>
+                            <div class="status-line">
+                                <span>iOS Support:</span>
+                                <span id="ios-status-text">Checking...</span>
+                            </div>
+                            <div class="status-line">
+                                <span>Active Devices:</span>
+                                <span id="active-devices">0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="status-card" id="monitoring-status-card">
+                        <h4>Monitoring</h4>
+                        <div class="status-content">
+                            <div class="status-line">
+                                <span>Status:</span>
+                                <span id="monitoring-status">Inactive</span>
+                            </div>
+                            <div class="status-line">
+                                <span>Last Update:</span>
+                                <span id="last-update">Never</span>
+                            </div>
+                            <div class="status-line">
+                                <span>Alerts:</span>
+                                <span id="active-alerts">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity Log -->
+            <div class="activity-section">
+                <h3>Recent Activity</h3>
+                <div class="activity-log" id="activity-log">
+                    <div class="log-entry">
+                        <span class="log-time">[12:00:00]</span>
+                        <span class="log-message">System initialized successfully</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/static/js/dashboard.js"></script>
+</body>
+</html>

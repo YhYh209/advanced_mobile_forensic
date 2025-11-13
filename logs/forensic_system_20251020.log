@@ -1,0 +1,168 @@
+2025-10-20 23:09:00,525 - root - INFO - Initializing Advanced Forensic Core...
+2025-10-20 23:09:01,750 - root - INFO - System Status: ADB=True, iOS=True
+2025-10-20 23:09:01,750 - root - INFO - Initializing Web Application...
+2025-10-20 23:09:03,161 - root - INFO - Starting Forensic Web Application...
+2025-10-20 23:09:18,241 - frontend.web_app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/frontend/web_app.py", line 31, in index
+    return render_template('dashboard.html')
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: dashboard.html
+2025-10-20 23:10:19,219 - frontend.web_app - ERROR - Exception on /hacking [GET]
+Traceback (most recent call last):
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/frontend/web_app.py", line 59, in hacking
+    return render_template('hacking.html')
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: hacking.html
+2025-10-20 23:11:03,563 - frontend.web_app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/frontend/web_app.py", line 31, in index
+    return render_template('dashboard.html')
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: dashboard.html
+2025-10-20 23:11:08,371 - frontend.web_app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/frontend/web_app.py", line 31, in index
+    return render_template('dashboard.html')
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: dashboard.html
+2025-10-20 23:16:15,804 - root - INFO - Initializing Advanced Forensic Core...
+2025-10-20 23:16:17,278 - root - INFO - System Status: ADB=True, iOS=True
+2025-10-20 23:16:17,278 - root - INFO - Initializing Web Application...
+2025-10-20 23:16:19,695 - root - INFO - Starting Forensic Web Application...
+2025-10-20 23:16:45,989 - frontend.web_app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/frontend/web_app.py", line 31, in index
+    return render_template('dashboard.html')
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/forensic_env/lib/python3.13/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: dashboard.html

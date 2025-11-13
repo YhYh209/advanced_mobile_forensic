@@ -1,0 +1,94 @@
+2025-11-10 09:32:38,771 - root - INFO - Initializing Advanced Forensic Core...
+2025-11-10 09:32:38,923 - root - INFO - System Status: ADB=True, iOS=True
+2025-11-10 09:32:38,923 - root - INFO - Initializing Web Application...
+2025-11-10 09:32:39,149 - root - INFO - Starting Forensic Web Application...
+2025-11-10 09:32:39,226 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.107:5000
+2025-11-10 09:32:39,226 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-11-10 09:32:53,514 - frontend.web_app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/kali/venv/lib/python3.13/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kali/venv/lib/python3.13/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kali/venv/lib/python3.13/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kali/venv/lib/python3.13/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/frontend/web_app.py", line 31, in index
+    return render_template('dashboard.html')
+  File "/home/kali/venv/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home/kali/venv/lib/python3.13/site-packages/jinja2/environment.py", line 1084, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/venv/lib/python3.13/site-packages/jinja2/environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/kali/venv/lib/python3.13/site-packages/jinja2/environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/kali/venv/lib/python3.13/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/venv/lib/python3.13/site-packages/flask/templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/venv/lib/python3.13/site-packages/flask/templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: dashboard.html
+2025-11-10 09:32:53,688 - werkzeug - INFO - 192.168.1.107 - - [10/Nov/2025 09:32:53] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-11-10 09:32:56,042 - werkzeug - INFO - 192.168.1.107 - - [10/Nov/2025 09:32:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-11-10 09:35:39,834 - root - INFO - Initializing Advanced Forensic Core...
+2025-11-10 09:35:40,320 - root - INFO - System Status: ADB=True, iOS=True
+2025-11-10 09:35:40,320 - root - INFO - Initializing Web Application...
+2025-11-10 09:35:40,513 - root - INFO - Starting Forensic Web Application...
+2025-11-10 09:35:40,590 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.107:5000
+2025-11-10 09:35:40,591 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-11-10 09:35:58,163 - frontend.web_app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/kali/venv/lib/python3.13/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kali/venv/lib/python3.13/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kali/venv/lib/python3.13/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kali/venv/lib/python3.13/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/kali/Desktop/Advenced_v1/advanced_mobile_forensic/frontend/web_app.py", line 31, in index
+    return render_template('dashboard.html')
+  File "/home/kali/venv/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home/kali/venv/lib/python3.13/site-packages/jinja2/environment.py", line 1084, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/venv/lib/python3.13/site-packages/jinja2/environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/kali/venv/lib/python3.13/site-packages/jinja2/environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/kali/venv/lib/python3.13/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/venv/lib/python3.13/site-packages/flask/templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/venv/lib/python3.13/site-packages/flask/templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: dashboard.html
+2025-11-10 09:35:58,455 - werkzeug - INFO - 192.168.1.107 - - [10/Nov/2025 09:35:58] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-11-10 09:35:58,978 - werkzeug - INFO - 192.168.1.107 - - [10/Nov/2025 09:35:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-11-10 09:59:27,239 - root - INFO - Initializing Advanced Forensic Core...
+2025-11-10 09:59:27,292 - root - INFO - System Status: ADB=True, iOS=True
+2025-11-10 09:59:27,292 - root - INFO - Initializing Web Application...
+2025-11-10 09:59:29,296 - root - ERROR - Application failed to start: type object 'GreenSocket' has no attribute 'sendmsg'
+2025-11-10 09:59:37,196 - root - INFO - Initializing Advanced Forensic Core...
+2025-11-10 09:59:37,205 - root - INFO - System Status: ADB=True, iOS=True
+2025-11-10 09:59:37,205 - root - INFO - Initializing Web Application...
+2025-11-10 09:59:37,479 - root - ERROR - Application failed to start: type object 'GreenSocket' has no attribute 'sendmsg'
